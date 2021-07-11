@@ -26,7 +26,7 @@ SECRET_KEY = 'uzmbb3c!47ga*9_jxvfixzyvmj$2j8f48o_=s$5oi3@mm4b!k0'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'soumyaapp123.herokuapp.com'
+    
 
 ]
 
