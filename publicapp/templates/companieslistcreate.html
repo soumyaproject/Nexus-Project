@@ -1,0 +1,18 @@
+<html>
+    <body align='center'>
+        <h1>ADD NEW ONE</h1>
+        <form method="POST" action='/create2/'>
+            {% csrf_token %}
+
+            <table align="center">
+
+                <tr><td>ID:</td><td><input type='number' name='id' ></td></tr>
+                <tr><td> NAME:</td><td><input type='text' name='name'  ></td></tr>
+                <tr><td>CITY:</td><td><input type='text' name='city'  ></td></tr>
+                <tr><td>ZIP_CODE:</td><td><input type='number' name='zip_code' ></td></tr>
+            </table><br>
+           
+            <input type='submit' value='ADD'>
+        </form>
+    </body>
+</html>

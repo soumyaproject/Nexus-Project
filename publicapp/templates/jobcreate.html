@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #4158D0;
+                background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+            }
+            h1{
+                color: #4158D0;
+            }
+        </style>
+    </head>
+
+<body align='center'>
+    <h1>ADD NEW JOB</h1>
+    <form method="POST" action='/createjob/'>
+        {% csrf_token %}
+        <table align="center">
+            <tr>
+        <td>ID:</td><td><input type='number' name='id'></td></tr>
+    <tr><td>TITLE:</td><td><input type='text' name='title'></td></tr>
+    <tr><td>PRICE:</td><td><input type='number' name='price'></td></tr>
+    <tr><td><label for="company">Choose a company:</label></td><td>
+        <select name="company" id="company">
+            {% for x in c2 %}
+            <option value={{x.name}}>{{x.name}}</option>
+            {% endfor %}
+            
+        </select>
+    </td></tr>
+        <tr><td><label for="contractor">Choose a contractor:</label></td><td>
+        <select name="contractor" id="contractor">
+            {% for x in c1 %}
+            <option value={{x.name}}>{{x.name}}</option>
+            {% endfor %}
+            
+        </select>
+    </td></tr>
+<tr><td>DATE:</td><td><input type='date' name='date'></td></tr>
+<tr><td>TIME:</td><td><input type='time' name='time'></td></tr>
+    </table>
+    <br></br>
+        <input type='submit' value='ADD'>
+</form>
+
+
+    <br></br><br></br>
+    <br></br>
+    <a href='/'>Back</a>
+</body>
+
+</html>

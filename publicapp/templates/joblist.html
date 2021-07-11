@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #FFFFFF;
+                background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+            }
+            h1{
+                color: #FF0000;
+            }
+            a{
+                text-decoration: none;
+                color:red;
+            }
+            th{
+                color:darkblue
+            }
+        </style>
+    </head>
+    <body align=center id='allbody'>
+        <h1>JOB LIST</h1>
+        <table align="center" border="1">
+            <thread>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>PRICE</th>
+                <th>COMPANY</th>
+                <th>CONTRACTOR</th>
+                <th>DATE</th>
+                <th>TIME</th>
+                <th>PROFILE MANAGER</th>
+
+
+            </thread>
+            {% for x in j %}
+            <tr>
+                <td><a href='/detailjob/{{x.id}}/'>{{x.id}}</a></td>
+                <td>{{x.title}}</td>
+                <td>{{x.price}}</td>
+                <td>{{x.company}}</td>
+                <td>{{x.contractor}}</td>
+                <td>{{x.date}}</td>
+                <td>{{x.time}}</td>
+
+                <td>&nbsp
+                <a href='/updatejob/{{x.id}}/'>UPDATE</a>&nbsp&nbsp&nbsp
+                <a href='/deletejob/{{x.id}}/'>DELETE</a></td>
+
+
+            </tr>
+            {% endfor %}
+        </table>
+
+        <br><br>
+        <a href='/createjob/'>ADD NEW JOB</a>
+        <br><br>
+        <br><br>
+        for admin page<a href='/login/'>click here</a>
+        <br><br>
+
+    </body>
+</html>

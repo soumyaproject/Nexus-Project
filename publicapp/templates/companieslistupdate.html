@@ -1,0 +1,18 @@
+<html>
+    <body align='center'>
+        <h1>Company id {{c.id}} update</h1>
+        <form method="POST" action='/update2/{{c.id}}/'>
+            {% csrf_token %}
+            <table align="center">
+
+                <tr><td>ID:</td><td><input type='number' name='id' value={{c.id}} disabled ></td></tr>
+                <tr><td> NAME:</td><td><input type='text' name='name' value={{c.name}} ></td></tr>
+                <tr><td>CITY:</td><td><input type='text' name='city' value={{c.city}} ></td></tr>
+                <tr><td>ZIP_CODE:</td><td><input type='number' name='zip_code' value={{c.zip_code}} ></td></tr>
+            </table>
+<br>
+            
+            <input type='submit' value='UPDATE'>
+        </form>
+    </body>
+</html>

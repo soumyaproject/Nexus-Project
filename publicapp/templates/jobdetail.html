@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #8BC6EC;
+                background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+            }
+            h1{
+                color:#1e2044;
+            }
+            th{
+                color:brown
+            }
+        </style>
+    </head>
+    <body align=center>
+        <h1>JOB DETAIL OF ID {{j.id}}</h1>
+        <table align="center" >
+            <thread>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>PRICE</th>
+                <th>COMPANY</th>
+                <th>CONTRACTOR</th>
+                <th>DATE</th>
+                <th>TIME</th>
+
+            </thread>
+           
+            <tr>
+                <td>{{j.id}}</td>
+                <td>{{j.title}}</td>
+                <td>{{j.price}}</td>
+                <td>{{j.company}}</td>
+                <td>{{j.contractor}}</td>
+                <td>{{j.date}}</td>
+                <td>{{j.time}}</td>
+               
+
+            </tr>
+            
+        </table>
+        <br></br>
+        <br></br>
+        <a href='/'>Back</a>
+    </body>
+</html>
